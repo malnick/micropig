@@ -31,6 +31,6 @@ func response(rw http.ResponseWriter, request *http.Request) {
 
 func main() {
 	log.Println("Micropig squelling on localhost:12312/micropig")
-	http.HandleFunc("/micropig", response)
-	http.ListenAndServe(":12313", nil)
+	http.HandleFunc("/query", response)
+	http.ListenAndServe(":8000", nil)
 }
