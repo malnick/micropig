@@ -1,0 +1,24 @@
+{
+  "id": "micropig",
+  "mem": 64,
+  "cpus": 0.1,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "malnick/micropig-0.0.0",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 8080, "hostPort": 0, "protocol": "tcp" }
+      ]
+    }
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "portIndex": 0,
+      "path": "/"
+    }
+  ]
+}
+
